@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2xh1e1h8d6hn"]
+
+[ext_resource type="Script" path="res://demon.gd" id="1_pmp1d"]
+[ext_resource type="Texture2D" uid="uid://b70slefvu7t6g" path="res://cuts/bosses/Demon.png" id="2_m7rit"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rlt4v"]
+size = Vector2(176, 248)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_41xj5"]
+size = Vector2(373, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mdxgq"]
+size = Vector2(77, 74)
+
+[node name="demon" type="CharacterBody2D"]
+script = ExtResource("1_pmp1d")
+
+[node name="Demon" type="Sprite2D" parent="."]
+texture = ExtResource("2_m7rit")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-16, 60)
+shape = SubResource("RectangleShape2D_rlt4v")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-10.5, 48)
+shape = SubResource("RectangleShape2D_41xj5")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-30.5, -72)
+shape = SubResource("RectangleShape2D_mdxgq")

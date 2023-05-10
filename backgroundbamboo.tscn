@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7vvxg2vsw54o"]
+
+[ext_resource type="Texture2D" uid="uid://s0atjtsn7o0a" path="res://cuts/tiles/8bit-vremya-sutki-utro-more.jpg" id="1_rgiwj"]
+
+[node name="background" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1440, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+texture = ExtResource("1_rgiwj")

@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://3p2nj8tsfmw7"]
+
+[ext_resource type="Script" path="res://lazer.gd" id="1_0ww2r"]
+[ext_resource type="Texture2D" uid="uid://bxo476mdhq0n0" path="res://cuts/bosses/lazer.png" id="2_rsgm2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tr8f4"]
+size = Vector2(168, 176)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4l002"]
+atlas = ExtResource("2_rsgm2")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_47n70"]
+atlas = ExtResource("2_rsgm2")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovi83"]
+atlas = ExtResource("2_rsgm2")
+region = Rect2(0, 256, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wwfkj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4l002")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_47n70")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ovi83")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="lazer" type="CharacterBody2D"]
+position = Vector2(32, -40)
+script = ExtResource("1_0ww2r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 24)
+shape = SubResource("RectangleShape2D_tr8f4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wwfkj")
+animation = &"idle"
+frame_progress = 0.919817

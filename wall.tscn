@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsnkgvuerunaf"]
+
+[ext_resource type="Texture2D" uid="uid://bxn71rsk7cvfg" path="res://cuts/tiles/Nature_environment_01.png" id="1_5rqxm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7778"]
+atlas = ExtResource("1_5rqxm")
+region = Rect2(976, 159, 61, 144)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mo2bx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7778")
+}],
+"loop": true,
+"name": &"wall",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h8cdh"]
+size = Vector2(64, 145)
+
+[node name="wall" type="StaticBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mo2bx")
+animation = &"wall"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_h8cdh")

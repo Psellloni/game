@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://btnv8upiw5yt6"]
+
+[ext_resource type="PackedScene" uid="uid://b7vvxg2vsw54o" path="res://backgroundbamboo.tscn" id="1_751yp"]
+[ext_resource type="PackedScene" uid="uid://b44w5f61r56ni" path="res://player.tscn" id="1_csppv"]
+[ext_resource type="PackedScene" uid="uid://baor1vea4efvk" path="res://box.tscn" id="2_ajtr7"]
+[ext_resource type="PackedScene" uid="uid://dsnkgvuerunaf" path="res://wall.tscn" id="4_06fsa"]
+[ext_resource type="PackedScene" uid="uid://3p2nj8tsfmw7" path="res://lazer.tscn" id="5_8c573"]
+[ext_resource type="PackedScene" uid="uid://ctl4sw85i3ncn" path="res://plantman.tscn" id="6_xtfqn"]
+
+[node name="main" type="Node2D"]
+position = Vector2(-16, 472)
+
+[node name="background" parent="." instance=ExtResource("1_751yp")]
+
+[node name="Player" parent="." instance=ExtResource("1_csppv")]
+position = Vector2(-437, -228)
+
+[node name="box" parent="." instance=ExtResource("2_ajtr7")]
+position = Vector2(-445, -116)
+
+[node name="box2" parent="." instance=ExtResource("2_ajtr7")]
+position = Vector2(-109, -116)
+
+[node name="box3" parent="." instance=ExtResource("2_ajtr7")]
+position = Vector2(227, -116)
+
+[node name="box4" parent="." instance=ExtResource("2_ajtr7")]
+position = Vector2(563, -116)
+
+[node name="box5" parent="." instance=ExtResource("2_ajtr7")]
+position = Vector2(899, -116)
+
+[node name="box6" parent="." instance=ExtResource("2_ajtr7")]
+position = Vector2(131, -252)
+
+[node name="box7" parent="." instance=ExtResource("2_ajtr7")]
+position = Vector2(491, -372)
+
+[node name="box8" parent="." instance=ExtResource("2_ajtr7")]
+position = Vector2(867, -500)
+
+[node name="box9" parent="." instance=ExtResource("2_ajtr7")]
+position = Vector2(1235, -116)
+
+[node name="box10" parent="." instance=ExtResource("2_ajtr7")]
+position = Vector2(1563, -116)
+
+[node name="box11" parent="." instance=ExtResource("2_ajtr7")]
+position = Vector2(1899, -116)
+
+[node name="box12" parent="." instance=ExtResource("2_ajtr7")]
+position = Vector2(1203, -500)
+
+[node name="box13" parent="." instance=ExtResource("2_ajtr7")]
+position = Vector2(1539, -500)
+
+[node name="wall" parent="." instance=ExtResource("4_06fsa")]
+position = Vector2(1675, -596)
+
+[node name="wall3" parent="." instance=ExtResource("4_06fsa")]
+position = Vector2(-581, -212)
+
+[node name="lazer" parent="." instance=ExtResource("5_8c573")]
+position = Vector2(1504, -632)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("6_xtfqn")]
+position = Vector2(896, -184)
+
+[node name="box14" parent="." instance=ExtResource("2_ajtr7")]
+position = Vector2(2296, -128)
+
+[node name="box15" parent="." instance=ExtResource("2_ajtr7")]
+position = Vector2(2632, -128)
+
+[node name="box16" parent="." instance=ExtResource("2_ajtr7")]
+position = Vector2(2968, -128)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("6_xtfqn")]
+position = Vector2(2648, -200)
